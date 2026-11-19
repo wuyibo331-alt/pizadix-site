@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pizadix — Greeting Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1e2a32;
+      --muted: #5a6b75;
+      --paper: #f3f7f4;
+      --leaf: #2f6f5e;
+      --leaf-deep: #1f4f43;
+      --wash: #d9ebe3;
+      --line: #c5d7cf;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, #e8f3ee 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, #e3eef8 0%, transparent 50%),
+        linear-gradient(180deg, var(--paper), #fff 55%);
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 72px 24px 56px;
+    }
+    .brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2.4rem, 6vw, 3.4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 12px;
+      color: var(--leaf-deep);
+    }
+    .tag {
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin: 0 0 28px;
+      max-width: 34em;
+      line-height: 1.55;
+    }
+    .cta {
+      display: inline-block;
+      background: var(--leaf);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: background .2s ease;
+    }
+    .cta:hover { background: var(--leaf-deep); }
+    .panel {
+      margin-top: 48px;
+      padding: 28px 26px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.72);
+    }
+    .panel h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.25rem;
+      margin: 0 0 10px;
+    }
+    .panel p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .panel a { color: var(--leaf); }
+    footer {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    footer a { color: var(--leaf); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1 class="brand">Pizadix</h1>
+    <p class="tag">
+      We are a small Amazon seller focused on printed greeting cards —
+      birthday, holiday, thank-you, and everyday occasions for shoppers in the U.S.
+    </p>
+    <a class="cta" href="mailto:wuyibo331@gmail.com">Contact us</a>
+
+    <section class="panel">
+      <h2>About the business</h2>
+      <p>
+        Operated by shanghaiyinghuadianzishangwuyouxiangongsi.
+        We sell physical greeting cards on Amazon and manage our own advertising accounts.
+        For privacy details related to Amazon Ads API use, see our
+        <a href="./privacy.html">Privacy Notice</a>.
+      </p>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Pizadix ·
+      <a href="mailto:wuyibo331@gmail.com">wuyibo331@gmail.com</a>
+    </footer>
+  </main>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
